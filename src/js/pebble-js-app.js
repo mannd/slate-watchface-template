@@ -18,7 +18,7 @@ Pebble.addEventListener('webviewclosed', function(e) {
   if (configData.backgroundColor) {
     Pebble.sendAppMessage({
       backgroundColor: parseInt(configData.backgroundColor, 16),
-      twentyFourHourFormat: configData.twentyFourHourFormat
+      twentyFourHourFormat: configData.twentyFourHourFormat ? 1 : 0
     }, function() {
       console.log('Send successful!');
     }, function() {
